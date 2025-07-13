@@ -12,7 +12,6 @@ def get_file_content(working_directory, file_path):
     if not target_file.startswith(abs_working_dir):
         return f'Error: Cannot list "{file_path}" as it is outside the permitted working directory'
     
-    print(f">>> file path: {file_path} {target_file}")
     if not os.path.isfile(target_file):
         return f'Error: File not found or is not a regular file: "{target_file}"'
     try:
